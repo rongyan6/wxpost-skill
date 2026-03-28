@@ -1,0 +1,4 @@
+interface:
+  display_name: "wxpost 技能"
+  short_description: "优化素材并执行公众号发文工作流"
+  default_prompt: "使用 $wxpost-skill 把我提供的素材整理成符合 wxpost-cli 要求的公众号内容，并执行下一步操作。"

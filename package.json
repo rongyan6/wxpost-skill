@@ -1,0 +1,48 @@
+{
+  "name": "@rongyan/wxpost-skill",
+  "version": "0.1.0",
+  "description": "微信公众号一键智能化运营技能，兼容 Codex 与 Claude Code。",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rongyan6/wxpost-skill.git"
+  },
+  "homepage": "https://github.com/rongyan6/wxpost-skill#readme",
+  "bugs": {
+    "url": "https://github.com/rongyan6/wxpost-skill/issues"
+  },
+  "bin": {
+    "wxpost-skill": "bin/wxpost-skill.js"
+  },
+  "files": [
+    "SKILL.md",
+    "README.md",
+    "bin",
+    "agents",
+    "assets",
+    "references",
+    "scripts"
+  ],
+  "scripts": {
+    "clean": "rm -rf scripts/__pycache__",
+    "check": "python3 -m py_compile scripts/create_article_stub.py",
+    "prepack": "npm run clean",
+    "start": "node bin/wxpost-skill.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "wechat",
+    "weixin",
+    "wxpost",
+    "skill",
+    "codex",
+    "claude-code",
+    "publisher",
+    "image-generation"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
