@@ -90,17 +90,31 @@ npx @rongyan/wxpost-cli@latest publish <media_id>
 
 ## `news` 图文消息 front matter
 
+工作稿可以先写成：
+
 ```markdown
 ---
 title: 文章标题
 author: 作者名
 digest: 摘要
-cover: ./images/cover.jpg
+cover: 扁平简洁的公众号封面插画，几何构图，大留白
+---
+```
+
+真正提交给 `wxpost-cli` 前，应替换为：
+
+```markdown
+---
+title: 文章标题
+author: 作者名
+digest: 摘要
+cover: ./images/cover-final.jpg
 ---
 ```
 
 - `title`：必填，最多 32 字
-- `cover`：必填，本地路径，且相对 Markdown 文件解析
+- 工作稿中的 `cover`：建议默认写封面提示词
+- 提交给 `wxpost-cli` 前的 `cover`：必须是本地路径，且相对 Markdown 文件解析
 - `author`：可选
 - `digest`：可选，不填则由 CLI 自动提取
 - `digest`：作为本技能默认约束，建议不超过 120 个中文字符
@@ -109,7 +123,7 @@ cover: ./images/cover.jpg
 
 - 尽量主动生成 `digest`，不要依赖自动提取
 - 将 `digest` 控制在 120 个中文字符以内
-- 根据 `digest` 先生成封面提示词，再单独出图
+- 默认根据 `digest` 生成封面提示词，并直接填入工作稿的 `cover`
 - 如果 `cover` 是提示词，则在建草稿前先生成封面图，再把本地图片路径写入 `cover`
 - 如果 `cover` 已经是本地图片路径，则不重复生成，除非用户明确要求
 - 建草稿前如果可以，先用 `humanizer-zh` 对正文做去 AI 化

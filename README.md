@@ -105,7 +105,7 @@ npx @rongyan/wxpost-skill
 如果是 `news` 图文消息，`cover` 支持两种输入方式：
 
 - 图片路径：直接使用，不重复生成，除非用户明确要求重做封面
-- 一段提示词：在发布前或建草稿前，先调用 `npx @rongyan/image-gen-cli@latest` 生成封面图，再把 `cover` 替换成最终图片路径
+- 一段提示词：这是推荐默认方式。先根据摘要生成封面提示词填入 `cover`，在发布前或建草稿前，再调用 `npx @rongyan/image-gen-cli@latest` 生成封面图，并把 `cover` 替换成最终图片路径
 
 需要注意的是：微信公众号图文消息封面建议裁剪为 `2.35:1`。由于 `@rongyan/image-gen-cli` 当前不直接支持这个宽高比，推荐先生成 `16:9` 宽图，再裁成最终封面。
 
