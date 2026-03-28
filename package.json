@@ -1,6 +1,6 @@
 {
   "name": "@rongyan/wxpost-skill",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "微信公众号一键智能化运营技能，兼容 Codex 与 Claude Code。",
   "license": "MIT",
   "repository": {
@@ -19,14 +19,9 @@
     "README.md",
     "bin",
     "agents",
-    "assets",
-    "references",
-    "scripts"
+    "references"
   ],
   "scripts": {
-    "clean": "rm -rf scripts/__pycache__",
-    "check": "python3 -m py_compile scripts/create_article_stub.py",
-    "prepack": "npm run clean",
     "start": "node bin/wxpost-skill.js"
   },
   "engines": {

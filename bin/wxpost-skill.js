@@ -13,9 +13,7 @@ const copyEntries = [
   'SKILL.md',
   'README.md',
   'agents',
-  'assets',
   'references',
-  'scripts',
 ];
 
 function printHelp() {

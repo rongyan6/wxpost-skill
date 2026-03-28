@@ -163,9 +163,6 @@ npx @rongyan/wxpost-cli@latest publish <media_id>
 - [SKILL.md](./SKILL.md)：主技能说明
 - [references/wxpost-cli-cheatsheet.md](./references/wxpost-cli-cheatsheet.md)：`wxpost-cli` 速查
 - [references/writing-rules.md](./references/writing-rules.md)：写作规则
-- [assets/article-template.md](./assets/article-template.md)：`news` 模板
-- [assets/newspic-template.md](./assets/newspic-template.md)：`newspic` 模板
-- [scripts/create_article_stub.py](./scripts/create_article_stub.py)：生成 Markdown 骨架的小脚本
 - [agents/openai.yaml](./agents/openai.yaml)：技能元数据
 
 ## 建议安装的外部依赖
