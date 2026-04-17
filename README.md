@@ -12,7 +12,7 @@
 推荐直接使用：
 
 ```bash
-npx @rongyan/wxpost-skill install --target claude
+npx @rongyan/wxpost-skill@latest install --target claude
 ```
 
 这条命令会自动把技能复制到：
@@ -28,7 +28,7 @@ npx @rongyan/wxpost-skill install --target claude
 如果你使用默认技能目录，推荐直接使用：
 
 ```bash
-npx @rongyan/wxpost-skill install --target codex
+npx @rongyan/wxpost-skill@latest install --target codex
 ```
 
 这条命令会自动安装到：
