@@ -1,7 +1,5 @@
 # wxpost-cli 速查
 
-本文基于本地文档 [wxpost-cli/README.md](/Users/jsonzhou/code/@rongyan/wxpost-cli/README.md) 整理。
-
 ## 前置条件
 
 - Node.js 18 及以上
@@ -162,15 +160,15 @@ image_list:
 
 CLI 会根据文件头校验图片格式，而不只看扩展名。对于 JPG 和 PNG，它会在必要时尝试压缩。
 
-微信公众号图文封面建议按 `2.35:1` 裁剪。由于 `image-gen-cli` 当前不直接支持该比例，推荐先生成宽图，例如 `16:9`，再裁成最终封面。
+封面图使用 1200×512px 直出，无需裁剪。
 
 示例：
 
 ```bash
-npx @rongyan/image-gen-cli@latest "扁平简洁的公众号封面插画，几何构图，大留白" --output ./images/cover-raw.jpg --aspect-ratio 16:9
+npx @rongyan/image-gen-cli@latest "扁平简洁的公众号封面插画，几何构图，大留白" --output ./images/cover.jpg --width 1200 --height 512
 ```
 
-生成后再裁剪为 `2.35:1`，并把最终图片路径写入 Markdown 的 `cover` 字段。
+生成后把图片路径写入 Markdown 的 `cover` 字段。
 
 ## Humanizer-zh
 
